@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    --orange: #F2AF5C;
+    --blue: #05A6A6;
+    --green: #63A680;
+    --blue-light: #A9D9D9;
+    --grey:#F2F2F2;
+  }
+
+  body {
+      background-color: var(--grey);
+  }
+  .colornav {
+      background-color: var(--blue);
+  }

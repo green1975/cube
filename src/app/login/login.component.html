@@ -1,0 +1,21 @@
+<div class="container-contact">
+    <!-- Default form contact -->
+    <form class="text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    
+        <p class="h4 mb-4">Se connecter</p>
+      
+        <!-- Name -->
+        <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
+          class="form-control mb-4" placeholder="Email">
+      
+        <!-- Email -->
+        <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
+          class="form-control mb-4" placeholder="Mot de passe">
+      
+        <!-- Send button -->
+        <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+          mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Envoyer</button>
+      
+      </form>
+      <!-- Default form contact -->
+    </div>
