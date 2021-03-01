@@ -8,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent  {
   title = 'realationnel';
+
+  options = [
+    { value: '1', label: 'Option 1' },
+    { value: '2', label: 'Option 2' },
+    { value: '3', label: 'Option 3' },
+  ];  
   
-  constructor() {}
- 
+  affichage:boolean = false;
+  
+  toggle() {
+    (this.affichage == true)?this.affichage = false:this.affichage = true; 
+  }
 }

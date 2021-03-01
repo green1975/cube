@@ -9,6 +9,10 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+import { FavorisComponent } from './favoris/favoris.component';
+import { HistoriqueComponent } from './historique/historique.component';
+import { RessourceComponent } from './ressource/ressource.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 @NgModule({
@@ -16,7 +20,11 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     AccueilComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    FavorisComponent,
+    HistoriqueComponent,
+    RessourceComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule, 

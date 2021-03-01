@@ -1,0 +1,20 @@
+.sidenav {
+    position: absolute;
+    max-width: 2500px;
+    max-height: 400px;;
+    top: 40px;
+    left: 0;
+    z-index: 0;
+    padding: 1rem;
+    background-color: var(--blue);
+}
+
+.menu_burger {
+    color:var(--grey);
+}
+.activeSide {
+    display: inline-block;
+}
+.inactive {
+    display:none;
+}

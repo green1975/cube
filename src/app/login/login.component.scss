@@ -3,4 +3,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 7rem;
+    border: 1px solid var(--blue);
+    border-radius: 20px;
+    padding: 1rem;;
+}
+.buttonLogin{
+    background-color: var(--blue);
+}
+.buttonRegister{
+    background-color: var(--blue);
+    align-self: center;
 }

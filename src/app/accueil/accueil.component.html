@@ -16,15 +16,15 @@
       </div>
     </form>
     <div class="selector">
-    <select class="browser-default custom-select">
+    <select class="browser-default custom-select selectSize">
       <option selected>Categorie</option>
       <option [value]="item.titre" *ngFor="let item of categories">{{ item.titre }}</option>
     </select>
-    <select class="browser-default custom-select">
+    <select class="browser-default custom-select selectSize">
       <option selected>Type de relation</option>
       <option [value]="relation.titre" *ngFor="let relation of typeRelation">{{ relation.titre }}</option>
     </select>
-      <select class="browser-default custom-select">
+      <select class="browser-default custom-select selectSize">
         <option selected>Type de ressource</option>
         <option [value]="ressource.titre" *ngFor="let ressource of typeRessource">{{ ressource.titre }}</option>
       </select>
