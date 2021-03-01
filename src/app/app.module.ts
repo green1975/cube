@@ -13,6 +13,7 @@ import { FavorisComponent } from './favoris/favoris.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { RessourceComponent } from './ressource/ressource.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { FicheComponent } from './fiche/fiche.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SearchResultComponent } from './search-result/search-result.component';
     FavorisComponent,
     HistoriqueComponent,
     RessourceComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    FicheComponent
   ],
   imports: [
     BrowserModule, 

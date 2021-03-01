@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { FavorisComponent } from './favoris/favoris.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { RessourceComponent } from './ressource/ressource.component';
+import { FicheComponent } from './fiche/fiche.component';
 
 const routes: Routes = [
   { path:'accueil-component', component:  AccueilComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'favoris-component', component: FavorisComponent },
   { path: 'historique-component', component: HistoriqueComponent },
   { path: 'ressource-component', component: RessourceComponent },
+  { path: 'fiche-component', component: FicheComponent },
 ];
 
 @NgModule({

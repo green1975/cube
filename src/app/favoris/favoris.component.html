@@ -1,1 +1,23 @@
-<p>favoris works!</p>
+<div class="titre">Liste de nos favoris</div>
+<div class="text-description">guhsdfmjbnfdsgfdsglmfsdsgmlhgmjdfhgfdjsmgmhfdjghfsdjgmfsdhgjsfdhgfdjghfdsjmghfsdgmufdhmgfjgfdj</div>
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action align-items-start active" *ngFor="let list of lists">
+        <div>
+            <img class="size-image" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"/>
+        </div>
+      <div>
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ list.titre }}</h5>
+            <small>{{ list.categorie }}</small>
+          </div>
+          <p class="mb-1">{{list.description}}</p>
+            <div class="d-flex w-100 justify-content-between">
+          <small>{{list.auteur}}</small>
+          <small>{{list.date}}</small>
+        </div>
+      </div>
+      <div class="trash">
+        <mdb-icon fas icon="trash" size="2x"></mdb-icon>
+      </div>
+    </a>
+  </div>
