@@ -18,21 +18,15 @@
     <div class="selector">
     <select class="browser-default custom-select">
       <option selected>Categorie</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option [value]="item.titre" *ngFor="let item of categories">{{ item.titre }}</option>
     </select>
     <select class="browser-default custom-select">
       <option selected>Type de relation</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option [value]="relation.titre" *ngFor="let relation of typeRelation">{{ relation.titre }}</option>
     </select>
       <select class="browser-default custom-select">
         <option selected>Type de ressource</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option [value]="ressource.titre" *ngFor="let ressource of typeRessource">{{ ressource.titre }}</option>
       </select>
     </div>
   </div>
