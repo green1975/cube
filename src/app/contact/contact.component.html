@@ -5,16 +5,16 @@
     <p class="h4 mb-4">Contacter-nous</p>
   
     <!-- Name -->
-    <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
+    <input type="text" formControlName="name" id="defaultContactFormName" mdbInput
       class="form-control mb-4" placeholder="Nom">
   
     <!-- Email -->
-    <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
+    <input type="email" formControlName="email" id="defaultContactFormEmail" mdbInput
       class="form-control mb-4" placeholder="E-mail">
   
     <!-- Subject -->
     <label>Sujet</label>
-    <select formControlName="contactFormSubjects" class="browser-default custom-select mb-4">
+    <select formControlName="sujet" class="browser-default custom-select mb-4">
       <option value="" disabled>Choissisez une option</option>
       <option value="1" selected>Retour sur le site</option>
       <option value="2">Declarer un bug</option>
@@ -24,7 +24,7 @@
   
     <!-- Message -->
     <div class="form-group">
-      <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
+      <textarea formControlName="message" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
         rows="3" placeholder="Message"></textarea>
     </div>
   

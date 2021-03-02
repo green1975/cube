@@ -1,6 +1,5 @@
-import { ConnectionService } from '../connection.service';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Component, HostListener } from '@angular/core';
+import { FormGroup, FormControl} from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -9,36 +8,21 @@ import { Component, HostListener } from '@angular/core';
 })
 export class ContactComponent  {
 
-  contactForm: FormGroup;
+  contactForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    sujet: new FormControl(''),
+    message: new FormControl('')
+  })
   disabledSubmitButton: boolean = true;
   optionsSelect: Array<any>;
 
-  @HostListener('input') oninput() {
+  
+  constructor() {}
 
-  if (this.contactForm.valid) {
-    this.disabledSubmitButton = false;
-    }
-  }
-
-  constructor(private fb: FormBuilder, private connectionService: ConnectionService) {
-
-  this.contactForm = fb.group({
-    'contactFormName': ['', Validators.required],
-    'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
-    'contactFormSubjects': ['', Validators.required],
-    'contactFormMessage': ['', Validators.required],
-    'contactFormCopy': [''],
-    });
-  }
 
   onSubmit() {
-    // this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-    //   alert('Your message has been sent.');
-    //   this.contactForm.reset();
-    //   this.disabledSubmitButton = true;
-    // }, error => {
-    //   console.log('Error', error);
-    // });
+    console.log(this.contactForm.value);
   }
 
 }

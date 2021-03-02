@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config/config.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-accueil',
@@ -10,15 +11,23 @@ export class AccueilComponent implements OnInit {
   categories: any;
   typeRelation: any;
   typeRessource: any;
+
+  searchResult = new FormGroup({
+    search: new FormControl(''),
+    ressource: new FormControl(''),
+    relation: new FormControl(''),
+    categorie: new FormControl('')
+  })
+
   constructor(
     private configService: ConfigService) {
   }   
-
+   
+  
   ngOnInit() {
     this.configService.getConfig()
       .subscribe(
         items => {
-          console.log(items['entries']);
           this.categories = items['entries'];
         });
         this.configService.getConfig1()
@@ -33,6 +42,9 @@ export class AccueilComponent implements OnInit {
           
           this.typeRessource = items2['entries'];
         });
+  }
+  onSubmit() {
+    console.log(this.searchResult.value);
   }
 
 }

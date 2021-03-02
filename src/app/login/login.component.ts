@@ -1,5 +1,4 @@
-import { ConnectionService } from '../connection.service';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Component, HostListener } from '@angular/core';
 
 @Component({
@@ -9,32 +8,16 @@ import { Component, HostListener } from '@angular/core';
 })
 export class LoginComponent {
 
-  contactForm: FormGroup;
+ 
   disabledSubmitButton: boolean = true;
   optionsSelect: Array<any>;
 
-  @HostListener('input') oninput() {
+  login = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl('')
+  })
 
-  if (this.contactForm.valid) {
-    this.disabledSubmitButton = false;
-    }
-  }
-
-  constructor(private fb: FormBuilder, private connectionService: ConnectionService) {
-
-  this.contactForm = fb.group({
-    'contactFormName': ['', Validators.required],
-    'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])]
-    });
-  }
-
-  onSubmit() {
-    // this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-    //   alert('Your message has been sent.');
-    //   this.contactForm.reset();
-    //   this.disabledSubmitButton = true;
-    // }, error => {
-    //   console.log('Error', error);
-    // });
+  onSubmit(){
+    console.log(this.login.value);
   }
 }
