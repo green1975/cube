@@ -14,6 +14,7 @@ import { HistoriqueComponent } from './historique/historique.component';
 import { RessourceComponent } from './ressource/ressource.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { FicheComponent } from './fiche/fiche.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FicheComponent } from './fiche/fiche.component';
     HistoriqueComponent,
     RessourceComponent,
     SearchResultComponent,
-    FicheComponent
+    FicheComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule, 

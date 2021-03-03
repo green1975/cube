@@ -1,15 +1,15 @@
 <div class="container-contact">
     <!-- Default form contact -->
-    <form class="text-center" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form class="text-center" [formGroup]="login" (ngSubmit)="onSubmit()">
     
         <p class="h4 mb-4">Se connecter</p>
       
         <!-- Name -->
-        <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
+        <input type="text" formControlName="email" id="defaultContactFormName" mdbInput
           class="form-control mb-4" placeholder="Email">
       
         <!-- Email -->
-        <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
+        <input type="email" formControlName="password" id="defaultContactFormEmail" mdbInput
           class="form-control mb-4" placeholder="Mot de passe">
       
         <!-- Send button -->
@@ -18,6 +18,6 @@
       </form>
       <a href="#">Mot de passe oublier</a>
       <hr>
-      <button type="button" mdbBtn class="buttonRegister waves-effect" mdbWavesEffect>Enregistrement</button>
+      <button type="button" routerLink="/register-component" mdbBtn class="buttonRegister waves-effect" mdbWavesEffect>Enregistrement</button>
       <!-- Default form contact -->
     </div>
