@@ -14,20 +14,30 @@
         <input class="form-control" type="search" id="search1" aria-label="Search" mdbInput>
         <label for="search1">Search</label>
       </div>
+      <div class="selector">
+        <div class="d-flex flex-column">
+          <label>Catégorie</label>
+          <select class="browser-default custom-select selectSize">
+            <option selected>Categorie</option>
+            <option [value]="item.titre" *ngFor="let item of categories">{{ item.titre }}</option>
+          </select>
+        </div>
+        <div class="d-flex flex-column">
+          <label>Type de relation</label>
+          <select class="browser-default custom-select selectSize">
+            <option selected>Type de relation</option>
+            <option [value]="relation.titre" *ngFor="let relation of typeRelation">{{ relation.titre }}</option>
+          </select>
+        </div>
+        <div class="d-flex flex-column">
+          <label>Type de ressource</label>
+          <select class="browser-default custom-select selectSize">
+            <option selected>Type de ressource</option>
+            <option [value]="ressource.titre" *ngFor="let ressource of typeRessource">{{ ressource.titre }}</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success buttonSend">Envoyer</button>
     </form>
-    <div class="selector">
-    <select class="browser-default custom-select selectSize">
-      <option selected>Categorie</option>
-      <option [value]="item.titre" *ngFor="let item of categories">{{ item.titre }}</option>
-    </select>
-    <select class="browser-default custom-select selectSize">
-      <option selected>Type de relation</option>
-      <option [value]="relation.titre" *ngFor="let relation of typeRelation">{{ relation.titre }}</option>
-    </select>
-      <select class="browser-default custom-select selectSize">
-        <option selected>Type de ressource</option>
-        <option [value]="ressource.titre" *ngFor="let ressource of typeRessource">{{ ressource.titre }}</option>
-      </select>
-    </div>
   </div>
   

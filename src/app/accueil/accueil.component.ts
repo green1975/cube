@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config/config.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-accueil',
@@ -21,18 +22,18 @@ export class AccueilComponent implements OnInit {
           console.log(items['entries']);
           this.categories = items['entries'];
         });
-        this.configService.getConfig1()
-      .subscribe(
-        items1 => {
-          
-          this.typeRelation = items1['entries'];
-        });
-        this.configService.getConfig2()
-      .subscribe(
-        items2 => {
-          
-          this.typeRessource = items2['entries'];
-        });
+    this.configService.getConfig1()
+  .subscribe(
+    items1 => {
+      
+      this.typeRelation = items1['entries'];
+    });
+    this.configService.getConfig2()
+  .subscribe(
+    items2 => {
+      
+      this.typeRessource = items2['entries'];
+    });
   }
 
 }
