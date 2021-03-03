@@ -14,10 +14,20 @@
 .selectSize {
     max-width: 200px;
 }
-.sendButton {
+.ButtonStyle {
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    min-width: 200px;
+    border-top-right-radius: 25px;
+    color: var(--grey);
+}
+.ButtonStyle:hover {
+    color:var(--orange);
+    background-color: var(--grey);
+    border: 1px solid var(--orange);
 }

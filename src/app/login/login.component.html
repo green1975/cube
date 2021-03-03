@@ -1,23 +1,14 @@
 <div class="container-contact">
     <!-- Default form contact -->
     <form class="text-center" [formGroup]="login" (ngSubmit)="onSubmit()">
-    
         <p class="h4 mb-4">Se connecter</p>
-      
-        <!-- Name -->
         <input type="text" formControlName="email" id="defaultContactFormName" mdbInput
           class="form-control mb-4" placeholder="Email">
-      
-        <!-- Email -->
         <input type="email" formControlName="password" id="defaultContactFormEmail" mdbInput
           class="form-control mb-4" placeholder="Mot de passe">
-      
-        <!-- Send button -->
-        <button mdbBtn color="info" outline="true" block="true" class="buttonLogin z-depth-0 my-4 waves-effect"
-          mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Connection</button>
+        <button mdbBtn class="ButtonStyle waves-effect" mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Connection</button>
       </form>
       <a href="#">Mot de passe oublier</a>
       <hr>
-      <button type="button" routerLink="/register-component" mdbBtn class="buttonRegister waves-effect" mdbWavesEffect>Enregistrement</button>
-      <!-- Default form contact -->
+      <button type="button" routerLink="/register" mdbBtn class="ButtonStyle waves-effect" mdbWavesEffect>Enregistrement</button>
     </div>

@@ -5,20 +5,23 @@
     --blue: #05A6A6;
     --green: #63A680;
     --blue-light: #A9D9D9;
-    --grey:#F2F2F2;
+    --grey:#fff;
+    --black: #00292F;
   }
 
   body {
       background-color: var(--grey);
+      color: var(--black);
   }
   .colornav {
       background-color: var(--blue);
+      height: 4rem;
   }
   .activePage{
       background-color: var(--orange);
   }
   .titre {
-    color: var(--blue);
+    color: var(--orange);
     font-size: 3rem;
     text-align: center;
     margin-top: 30px;

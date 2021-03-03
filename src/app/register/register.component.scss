@@ -4,14 +4,24 @@
     margin-right: auto;
     margin-top: 7rem;
     margin-bottom: 7rem;
-    border: 1px solid var(--blue);
+    border: 1px solid var(--orange);
     border-radius: 20px;
     padding: 1rem;;
 }
-.buttonLogin{
-    background-color: var(--blue);
+.ButtonStyle {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    min-width: 200px;
+    border-top-right-radius: 25px;
+    color: var(--grey);
 }
-.buttonRegister{
-    background-color: var(--blue);
-    align-self: center;
+.ButtonStyle:hover {
+    color:var(--orange);
+    background-color: var(--grey);
+    border: 1px solid var(--orange);
 }

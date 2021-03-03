@@ -14,7 +14,7 @@ export class ContactComponent  {
     sujet: new FormControl(''),
     message: new FormControl('')
   })
-  disabledSubmitButton: boolean = true;
+  disabledSubmitButton: boolean = false;
   optionsSelect: Array<any>;
 
   

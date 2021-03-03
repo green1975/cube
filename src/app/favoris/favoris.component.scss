@@ -21,11 +21,14 @@
 }
 .trash {
     margin-left: 20px;
+    margin-top: 20px;
+    color: var(--orange)
 }
 a:nth-child(even) {
     background: var(--blue);
+    color: var(--black)
 }
 a:nth-child(odd) {
     background: var(--grey);
-    color: var(--blue)
+    color: var(--black)
 }

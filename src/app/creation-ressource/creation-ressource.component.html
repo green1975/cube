@@ -1,0 +1,57 @@
+<div class="titre">Mes ressources</div>
+<div class="text-description">guhsdfmjbnfdsgfdsglmfsdsgmlhgmjdfhgfdjsmgmhfdjghfsdjgmfsdhgjsfdhgfdjghfdsjmghfsdgmufdhmgfjgfdj</div>
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action align-items-start active" *ngFor="let list of lists">
+        <div>
+            <img class="size-image" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"/>
+        </div>
+      <div class="w-100">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ list.titre }}</h5>
+            <small>{{ list.categorie }}</small>
+          </div>
+          <p class="mb-1">{{list.description}}</p>
+            <div class="d-flex w-100 justify-content-between">
+          <small>{{list.auteur}}</small>
+          <small>{{list.date}}</small>
+        </div>
+      </div>
+      <div class="trash">
+        <mdb-icon fas icon="trash" size="2x"></mdb-icon>
+      </div>
+    </a>
+  </div>
+  <div>
+   
+  <div class="creation-container" >
+    <div class="titre">Création d'une nouvelle ressource</div>
+      <select class="browser-default custom-select selectSize">
+        <option>Texte</option>
+        <option>Document</option>
+        <option>Jeu</option>
+        <option>Image</option>
+        <option>Video</option>
+      </select>
+  </div>
+  <div class="container-form">
+    <form>
+      <div class="form-outline">
+        <label class="form-label" for="form1">Titre</label>
+        <input type="text" id="form1" class="form-control" />
+      </div>
+      <div class="form-outline">
+        <label class="form-label" for="textAreaExample">Description courte</label>
+        <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+      </div>
+      <div  class="form-outline">
+        <label class="form-label" for="customFile">Document/image</label>
+        <input type="file" class="form-control" id="customFile" />
+      </div>
+      <div class="form-outline">
+        <label class="form-label" for="typeURL">Lien video youtube</label>
+        <input type="url" id="typeURL" class="form-control" />
+      </div>
+      <button type="submit" class="btn ButtonStyle">Creer</button>
+    </form>
+  </div>
+</div>

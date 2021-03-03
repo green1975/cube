@@ -9,7 +9,7 @@ import { Component, HostListener } from '@angular/core';
 export class LoginComponent {
 
  
-  disabledSubmitButton: boolean = true;
+  disabledSubmitButton: boolean = false;
   optionsSelect: Array<any>;
 
   login = new FormGroup({

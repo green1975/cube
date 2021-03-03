@@ -1,0 +1,73 @@
+.list-group {
+    max-width: 800px;
+    max-height: 450px;
+    overflow: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;  
+}
+.list-group a {
+    display: flex;
+}
+.text-description {
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.size-image {
+    width: 100px;
+    margin-right: 20px;
+    margin-top: 20px;;
+}
+.trash {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: var(--orange);
+}
+a:nth-child(even) {
+    background: var(--blue);
+    color: var(--black)
+}
+a:nth-child(odd) {
+    background: var(--grey);
+    color: var(--black)
+}
+.creation-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+.container-form {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    border: 2px solid var(--orange);
+    border-radius: 20px;
+}
+.form-outline {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ButtonStyle {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    min-width: 200px;
+    border-top-right-radius: 25px;
+    color: var(--grey);
+}
+.ButtonStyle:hover {
+    color:var(--orange);
+    background-color: var(--grey);
+    border: 1px solid var(--orange);
+}

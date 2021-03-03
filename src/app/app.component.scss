@@ -2,19 +2,23 @@
     position: absolute;
     max-width: 2500px;
     max-height: 400px;;
-    top: 40px;
+    top: 4rem;
     left: 0;
     z-index: 0;
-    padding: 1rem;
     background-color: var(--blue);
 }
 
 .menu_burger {
     color:var(--grey);
+    height: 2rem;
 }
 .activeSide {
     display: inline-block;
 }
 .inactive {
     display:none;
+}
+.side{
+    padding: 1rem 0.5rem;
+    border-bottom: 1px dotted var(--black);
 }

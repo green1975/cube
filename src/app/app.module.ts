@@ -15,6 +15,7 @@ import { RessourceComponent } from './ressource/ressource.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { FicheComponent } from './fiche/fiche.component';
 import { RegisterComponent } from './register/register.component';
+import { CreationRessourceComponent } from './creation-ressource/creation-ressource.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { RegisterComponent } from './register/register.component';
     RessourceComponent,
     SearchResultComponent,
     FicheComponent,
-    RegisterComponent
+    RegisterComponent,
+    CreationRessourceComponent
   ],
   imports: [
     BrowserModule, 
