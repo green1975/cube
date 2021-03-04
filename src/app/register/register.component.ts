@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { config } from 'rxjs';
-import { ConfigService } from '../config/config.service'
+import { Router } from '@angular/router';
+import { ConfigService } from '../config/config.service';
 
 @Component({
   selector: 'app-register',
@@ -21,14 +21,24 @@ export class RegisterComponent implements OnInit {
   disabledSubmitButton: boolean = false;
   optionsSelect: Array<any>;
 
-  constructor(private configService: ConfigService) { }
+  constructor(private configService: ConfigService, private router: Router) { }
 
   ngOnInit(): void {
   }
  
   onSubmit(){
-    this.configService.addUser(this.register.value).subscribe((user) => {
+    let data = {
+      data:{
+        nom: this.register.value.name,
+        mail: this.register.value.name,
+        ville: this.register.value.ville,
+        code_postale: this.register.value.codePostal,
+        password: this.register.value.password
+    }
+  }
+    this.configService.addUser(data).subscribe((user) => {
       console.log(user);
+      this.router.navigate(['/accueil-component']);
     })
     
   }
