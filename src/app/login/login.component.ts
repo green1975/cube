@@ -8,6 +8,7 @@ import { ConfigService } from '../config/config.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+
   disabledSubmitButton: boolean = false;
   optionsSelect: Array<any>;
   login = new FormGroup({

@@ -10,16 +10,19 @@ import { HistoriqueComponent } from './historique/historique.component';
 import { RessourceComponent } from './ressource/ressource.component';
 import { FicheComponent } from './fiche/fiche.component';
 import { RegisterComponent } from './register/register.component';
+import { CreationRessourceComponent } from './creation-ressource/creation-ressource.component';
 
 const routes: Routes = [
-  { path:'accueil-component', component:  AccueilComponent},
-  { path: 'contact-component', component: ContactComponent },
-  { path: 'login-component', component: LoginComponent },
-  { path: 'favoris-component', component: FavorisComponent },
-  { path: 'historique-component', component: HistoriqueComponent },
-  { path: 'ressource-component', component: RessourceComponent },
-  { path: 'fiche-component', component: FicheComponent },
-  { path: 'register-component', component: RegisterComponent },
+  { path: '', redirectTo: 'accueil', pathMatch: 'full'},
+  { path: 'accueil', component:  AccueilComponent},
+  { path: 'contact', component: ContactComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'favoris', component: FavorisComponent },
+  { path: 'historique', component: HistoriqueComponent },
+  { path: 'ressource', component: RessourceComponent },
+  { path: 'fiche', component: FicheComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'creation-ressource', component: CreationRessourceComponent },
 ];
 
 @NgModule({

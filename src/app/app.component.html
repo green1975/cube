@@ -1,48 +1,38 @@
-<!--Navbar-->
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark colornav" [containerInside]="false">
   <div class="sidenav" [ngClass]="(affichage)?'activeSide':'inactive'">
     <ul class="nav flex-column">
-      <li class="nav-item">
-        <a routerLink="/accueil-component" routerLinkActive="activePage">Accueil</a>
+      <li class="nav-item side" routerLinkActive="activePage">
+        <a routerLink="/accueil">Accueil</a>
       </li>
-      <li class="nav-item">
-        <a routerLink="/ressource-component" routerLinkActive="activePage">Gestion des ressources</a>
+      <li class="nav-item side" routerLinkActive="activePage">
+        <a routerLink="/creation-ressource">Gestion des ressources</a>
       </li>
-      <li class="nav-item">
-        <a routerLink="/favoris-component" routerLinkActive="activePage">Favoris</a>
+      <li class="nav-item side" routerLinkActive="activePage">
+        <a routerLink="/favoris">Favoris</a>
       </li>
-      <li class="nav-item">
-        <a routerLink="/historique-component" routerLinkActive="activePage">Historique</a>
+      <li class="nav-item side" routerLinkActive="activePage">
+        <a routerLink="/historique">Historique</a>
       </li>
   </ul>
   </div>
-    <button class="menu_burger" (click) ="toggle()" type="button" mdbBtn mdbWavesEffect><div ><mdb-icon fas icon="bars"></mdb-icon></div></button>
+    <div class="menu_burger" (click) ="toggle()" mdbWavesEffect><div ><mdb-icon fas icon="bars" class="fa-lg"></mdb-icon></div></div>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a routerLink="/contact-component" routerLinkActive="active" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon> Contact<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a routerLink="/contact"  class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon>Contact<span class="sr-only">(current)</span></a>
       </li>
-      <!-- Dropdown -->
       <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+        <a dropdownToggle mdbWavesEffect class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
           <mdb-icon fas icon="user"></mdb-icon> Utilisateur<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
-          <a routerLink="/login-component" class="dropdown-item waves-light" mdbWavesEffect>Mon compte</a>
+          <a routerLink="/login" class="dropdown-item waves-light" mdbWavesEffect>Mon compte</a>
           <a class="dropdown-item waves-light" mdbWavesEffect href="#">Deconnexion</a>
         </div>
       </li>
     </ul>
-  <!-- Collapsible content -->
 </mdb-navbar>
-
 <router-outlet></router-outlet>
-<!-- Footer -->
 <footer class="page-footer font-small  fixed-bottom colornav">
-
-  <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="https://mdbootstrap.com/"> RElationnel</a>
   </div>
-  <!-- Copyright -->
-
 </footer>
-<!-- Footer -->

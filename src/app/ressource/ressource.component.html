@@ -1,18 +1,14 @@
 
 <div class="titre">Résultat de la recherche</div>
 <div class="card-container" >
-    <!-- Card -->
 <mdb-card class="card" *ngFor="let list of lists">
     <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-      <!-- Card img -->
       <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
-      <a routerLink="/fiche-component">
+      <a routerLink="/fiche">
         <div class="mask"></div>
       </a>
     </div>
-    <!--Card content-->
     <mdb-card-body>
-      <!--Title-->
       <mdb-card-title>
         <h4>{{list.titre}}</h4>
       </mdb-card-title>
@@ -37,8 +33,6 @@
       </mdb-card-text>
       <div>Auteur:{{list.auteur}}</div>
       <div>date: {{list.date}}</div>
-      <!-- <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a> -->
     </mdb-card-body>
   </mdb-card>
-  <!-- Card -->
 </div>
