@@ -34,22 +34,45 @@
       </select>
   </div>
   <div class="container-form">
-    <form>
+    <form [formGroup]="create" (ngSubmit)="onSubmit()">
+      <div class="selector">
+        <div class="d-flex flex-column">
+          <label>Catégorie</label>
+          <select class="browser-default custom-select selectSize" formControlName="categorie">
+            <option selected>Categorie</option>
+            <option [value]="item.titre" *ngFor="let item of categories">{{ item.titre }}</option>
+          </select>
+        </div>
+       <div class="d-flex flex-column">
+         <label>Type de relation</label>
+         <select class="browser-default custom-select selectSize" formControlName="relation">
+          <option selected>Type de relation</option>
+          <option [value]="relation.titre" *ngFor="let relation of typeRelation">{{ relation.titre }}</option>
+        </select>
+       </div>
+        <div class="d-flex flex-column">
+          <label>Type de ressource</label>
+          <select class="browser-default custom-select selectSize" formControlName="ressource">
+            <option selected>Type de ressource</option>
+            <option [value]="ressource.titre" *ngFor="let ressource of typeRessource">{{ ressource.titre }}</option>
+          </select>
+        </div>
+      </div>
       <div class="form-outline">
         <label class="form-label" for="form1">Titre</label>
-        <input type="text" id="form1" class="form-control" />
+        <input type="text" id="form1" class="form-control" formControlName="titre"/>
       </div>
       <div class="form-outline">
         <label class="form-label" for="textAreaExample">Description courte</label>
-        <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+        <textarea class="form-control" id="textAreaExample" rows="4" formControlName="description"></textarea>
       </div>
       <div  class="form-outline">
         <label class="form-label" for="customFile">Document/image</label>
-        <input type="file" class="form-control" id="customFile" />
+        <input type="file" class="form-control" id="customFile" formControlName="document"/>
       </div>
       <div class="form-outline">
         <label class="form-label" for="typeURL">Lien video youtube</label>
-        <input type="url" id="typeURL" class="form-control" />
+        <input type="url" id="typeURL" class="form-control" formControlName="youtube"/>
       </div>
       <button type="submit" class="btn ButtonStyle">Creer</button>
     </form>

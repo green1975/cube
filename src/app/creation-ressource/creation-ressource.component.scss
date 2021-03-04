@@ -71,3 +71,9 @@ a:nth-child(odd) {
     background-color: var(--grey);
     border: 1px solid var(--orange);
 }
+.selector {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
