@@ -1,5 +1,9 @@
 .container {
-    max-width: 1000px;;
+    max-width: 1000px;
+    margin-bottom: 100px;
+}
+.container p {
+    text-align: justify;
 }
 .selector {
     display: flex;
@@ -30,4 +34,20 @@
     color:var(--orange);
     background-color: var(--grey);
     border: 1px solid var(--orange);
+}
+@media(max-width: 800px){
+    .container {
+        margin-bottom: 6rem;
+    }
+    .selector {
+        flex-direction: column; 
+    }
+    .select-one {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p{
+        text-align: justify;
+        padding: 0rem 1rem;
+    }
 }

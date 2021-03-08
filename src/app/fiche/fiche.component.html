@@ -1,25 +1,26 @@
 <div class="titre">Fiche ressource</div>
-<div class="text-description">guhsdfmjbnfdsgfdsglmfsdsgmlhgmjdfhgfdjsmgmhfdjghfsdjgmfsdhgjsfdhgfdjghfdsjmghfsdgmufdhmgfjgfdj</div>
-<iframe class="video" width="500" height="315"src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+<p class="text-description">guhsdfmjb nfdsgfdsglmfs dsgmlhg mjdfhgfdj smgmh fdjghfsdjgm fsdhgjsfdhgfdjghfd sjmghfsdg mufdhmgfjgfdj</p>
+<iframe class="video" max-width="500" max-height="315"src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 <div class="list-group">
+  <div class="titre">Commentaires</div>
+    <div class="comment list-group-item-action align-items-start">
+      <form>
+        <input class="post" type="text" name="commentaire" placeholder="Ajouter votre commentaire.."/>
+        <button class="postButton" type="submit" name="post"><i class="fas fa-paper-plane fa-lg"></i></button>
+      </form>
+      
+    </div>
     <a href="#" class="list-group-item list-group-item-action align-items-start active" *ngFor="let list of lists">
-        <div>
-            <img class="size-image" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"/>
+        <div class="avatar">
+            <div class="cercle"><strong>A</strong></div>
         </div>
-      <div>
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{ list.titre }}</h5>
-            <small>{{ list.categorie }}</small>
-          </div>
+        <div class="d-flex w-100 flex-column commentaire">
+          <h5 class="mb-1">{{list.auteur}} - {{list.date}}</h5>
           <p class="mb-1">{{list.description}}</p>
-            <div class="d-flex w-100 justify-content-between">
-          <small>{{list.auteur}}</small>
-          <small>{{list.date}}</small>
         </div>
-      </div>
-      <div class="trash">
-        <mdb-icon fas icon="trash" size="2x"></mdb-icon>
-      </div>
+        <div class="trash">
+          <mdb-icon fas icon="trash" size="2x"></mdb-icon>
+        </div>
     </a>
   </div>
 

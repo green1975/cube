@@ -1,7 +1,7 @@
 .card {
     max-width: 250px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 
 }
 .card-container {
@@ -12,4 +12,33 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 30px;
+    margin-bottom: 100px;
+} 
+.tableau {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.tableau th {
+    border:1px solid var(--orange);
+    border-collapse: collapse;
+    text-align: center;
+}
+.tableau td {
+    border:1px solid var(--orange);
+    border-collapse: collapse;
+    text-align: center;
+}
+.auteur {
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width: 640px) {
+    .card-container {
+        justify-content:center;
+        margin-left: 1rem;
+    }
+    .card {
+        max-width: 600px;
+    }
 }

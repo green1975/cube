@@ -8,8 +8,8 @@
     display: flex;
 }
 .text-description {
-    text-align: center;
-    max-width: 1200px;
+    text-align: justify;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -31,4 +31,19 @@ a:nth-child(even) {
 a:nth-child(odd) {
     background: var(--grey);
     color: var(--black)
+}
+@media(max-width: 800px){
+    
+    .list-group{
+        padding: 0rem 1rem;
+    }
+    .list-group a {
+        flex-direction: column;
+    }
+    .list-group img {
+        width: 100%;
+    }
+    .text-description {
+        margin: 1rem;
+    }
 }

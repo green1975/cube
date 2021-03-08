@@ -12,7 +12,7 @@
       <mdb-card-title>
         <h4>{{list.titre}}</h4>
       </mdb-card-title>
-      <table>
+      <table class="tableau">
         <thead>
             <tr>
                 <th>catégorie</th>
@@ -29,10 +29,12 @@
         </tbody>
     </table>
       <mdb-card-text> 
-        <span>Description:</span> {{list.description}}
+       {{list.description}}
       </mdb-card-text>
-      <div>Auteur:{{list.auteur}}</div>
-      <div>date: {{list.date}}</div>
+      <div class="auteur">
+        <small>{{list.auteur}}</small>
+      <small>{{list.date}}</small>
+      </div>
     </mdb-card-body>
   </mdb-card>
 </div>

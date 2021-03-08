@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config/config.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ThisReceiver } from '@angular/compiler';
 
 
 @Component({
@@ -29,6 +30,7 @@ export class AccueilComponent implements OnInit {
     this.configService.getConfig()
       .subscribe(
         items => {
+          console.log(items['entries']);
           this.categories = items['entries'];
         });
     this.configService.getConfig1()
@@ -45,7 +47,17 @@ export class AccueilComponent implements OnInit {
     });
   }
   onSubmit() {
-    console.log(this.searchResult.value);
-  }
+    let data = {
+      filter: { $and:[{
+            categorie: this.searchResult.value.categorie,
+            typeRelationId: this.searchResult.value.relation,
+            typeRessourceId: this.searchResult.value.ressource
+          }]    
+        }
+      }
 
+    this.configService.search(data).subscribe((result)=>{
+      console.log(result);
+    })
+  }
 }

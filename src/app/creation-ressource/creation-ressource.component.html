@@ -1,5 +1,5 @@
 <div class="titre">Mes ressources</div>
-<div class="text-description">guhsdfmjbnfdsgfdsglmfsdsgmlhgmjdfhgfdjsmgmhfdjghfsdjgmfsdhgjsfdhgfdjghfdsjmghfsdgmufdhmgfjgfdj</div>
+<p class="text-description">guhsdfmj bn fdsgfdsgl mfsd sgmlhgmjd fhg fdjsmgmhfdjgh fsdjg mfsdhg jsfdhgfdjg hfdsjmghfs dgmufd hmgfjgfdj</p>
 <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action align-items-start active" *ngFor="let list of lists">
         <div>
@@ -13,7 +13,7 @@
           <p class="mb-1">{{list.description}}</p>
             <div class="d-flex w-100 justify-content-between">
           <small>{{list.auteur}}</small>
-          <small>{{list.date}}</small>
+          <small>{{ list._created * 1000 | date: 'dd-MM-yyyy'}}</small>
         </div>
       </div>
       <div class="trash">
@@ -25,12 +25,12 @@
    
   <div class="creation-container" >
     <div class="titre">Création d'une nouvelle ressource</div>
-      <select class="browser-default custom-select selectSize">
-        <option>Texte</option>
-        <option>Document</option>
-        <option>Jeu</option>
-        <option>Image</option>
-        <option>Video</option>
+      <select class="browser-default custom-select selectSize" (click)="choixFormat()" [(ngModel)]="selectedOption">
+        <option value="1">Texte</option>
+        <option value="2">Document</option>
+        <option value="1">Jeu</option>
+        <option value="2">Image</option>
+        <option value="5">Video</option>
       </select>
   </div>
   <div class="container-form">
@@ -66,13 +66,19 @@
         <label class="form-label" for="textAreaExample">Description courte</label>
         <textarea class="form-control" id="textAreaExample" rows="4" formControlName="description"></textarea>
       </div>
-      <div  class="form-outline">
-        <label class="form-label" for="customFile">Document/image</label>
-        <input type="file" class="form-control" id="customFile" formControlName="document"/>
-      </div>
-      <div class="form-outline">
-        <label class="form-label" for="typeURL">Lien video youtube</label>
-        <input type="url" id="typeURL" class="form-control" formControlName="youtube"/>
+      <div [ngSwitch]="selectedOption">
+        <div  class="form-outline" *ngSwitchCase="2">
+          <label class="form-label" for="customFile">Document/image</label>
+          <input type="file" class="form-control" id="customFile"  (change)="onFileChange($event)" formControlName="file"/>
+        </div>
+        <div class="form-outline" *ngSwitchCase="5">
+          <label class="form-label" for="typeURL">Lien video youtube</label>
+          <input type="url" id="typeURL" class="form-control" formControlName="youtube"/>
+        </div>
+        <div class="form-outline" *ngSwitchCase="1">
+          <label class="form-label" for="textAreaExample">Ressource</label>
+          <textarea class="form-control" id="textAreaExample" rows="4" formControlName="texte"></textarea>
+        </div>
       </div>
       <button type="submit" class="btn ButtonStyle">Creer</button>
     </form>

@@ -25,3 +25,11 @@
     background-color: var(--grey);
     border: 1px solid var(--orange);
 }
+@media(max-width: 640px){
+    .container-contact {
+        padding: 1rem;
+        margin-top: 5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}

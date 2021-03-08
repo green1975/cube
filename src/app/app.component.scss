@@ -4,7 +4,7 @@
     max-height: 400px;;
     top: 4rem;
     left: 0;
-    z-index: 0;
+    z-index: 100;
     background-color: var(--blue);
 }
 
@@ -21,4 +21,18 @@
 .side{
     padding: 1rem 0.5rem;
     border-bottom: 1px dotted var(--black);
+}
+.mobile {
+    display: none
+}
+.footer-copyright{
+    background-color: var(--blue) !important;
+}
+@media(max-width:800px){
+    .web {
+        display: none;
+    }
+    .mobile {
+        display: inline;
+    }
 }

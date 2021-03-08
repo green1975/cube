@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse, HttpEvent, HttpEventType } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError, retry, map } from 'rxjs/operators';
 import { LoginComponent } from '../login/login.component';
 
 const httpOptions = {
   headers: new HttpHeaders(
     {
-      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin':'*',
     }
   )
 };
@@ -19,6 +19,7 @@ const httpOptions = {
 )
 export class ConfigService {
 configUrl = 'assets/config.json';
+serverUrl: string = "https://admin.myjolieplanet.com/upload.php";
   constructor(private http: HttpClient) { }
 
   private handleError(error: HttpErrorResponse, value) {
@@ -53,5 +54,20 @@ login(user): Observable<Object>{
   .pipe(
     catchError(this.handleError)
   );
+}
+sendFormData(formData): Observable<Object> {
+  return this.http.post<any>(this.serverUrl, formData, httpOptions);
+}
+postRessource(data): Observable<Object> {
+  return this.http.post<any>('https://admin.myjolieplanet.com/api/collections/save/ressource?token=8239152105c18d3d8e2282f747d183', data)
+  .pipe(
+    catchError(this.handleError)
+  );
+}
+getRessource(): Observable<Object> {
+  return this.http.get('https://admin.myjolieplanet.com/api/collections/get/ressource?token=8239152105c18d3d8e2282f747d183');
+}
+search(param): Observable<Object> {
+  return this.http.post('https://admin.myjolieplanet.com/api/collections/get/ressource?token=8239152105c18d3d8e2282f747d183', param);
 }
 }

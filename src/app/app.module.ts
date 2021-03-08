@@ -12,10 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { FavorisComponent } from './favoris/favoris.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { RessourceComponent } from './ressource/ressource.component';
-import { SearchResultComponent } from './search-result/search-result.component';
 import { FicheComponent } from './fiche/fiche.component';
 import { RegisterComponent } from './register/register.component';
 import { CreationRessourceComponent } from './creation-ressource/creation-ressource.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -27,7 +28,6 @@ import { CreationRessourceComponent } from './creation-ressource/creation-ressou
     FavorisComponent,
     HistoriqueComponent,
     RessourceComponent,
-    SearchResultComponent,
     FicheComponent,
     RegisterComponent,
     CreationRessourceComponent
@@ -38,7 +38,8 @@ import { CreationRessourceComponent } from './creation-ressource/creation-ressou
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

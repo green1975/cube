@@ -37,8 +37,7 @@ export class RegisterComponent implements OnInit {
     }
   }
     this.configService.addUser(data).subscribe((user) => {
-      console.log(user);
-      this.router.navigate(['/accueil-component']);
+      this.router.navigate(['/accueil']);
     })
     
   }

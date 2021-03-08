@@ -1,6 +1,6 @@
 <!--/.Navbar-->
 <div class="container">
-    <h1 class="titresite">Bienvenue sur RElationnel</h1>
+    <h1 class="titresite"><img src="/assets/logo/relationnel.png" alt="logo relationnel"></h1>
     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration 
       in some form, by injected humour, or randomised words which don't look even slightly believable. If 
       you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
@@ -15,21 +15,21 @@
         <label for="search1">Search</label>
       </div>
       <div class="selector">
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column select-one">
           <label>Catégorie</label>
           <select class="browser-default custom-select selectSize" formControlName="categorie">
             <option selected>Categorie</option>
             <option [value]="item.titre" *ngFor="let item of categories">{{ item.titre }}</option>
           </select>
         </div>
-       <div class="d-flex flex-column">
+       <div class="d-flex flex-column select-one">
          <label>Type de relation</label>
          <select class="browser-default custom-select selectSize" formControlName="relation">
           <option selected>Type de relation</option>
           <option [value]="relation.titre" *ngFor="let relation of typeRelation">{{ relation.titre }}</option>
         </select>
        </div>
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column select-one">
           <label>Type de ressource</label>
           <select class="browser-default custom-select selectSize" formControlName="ressource">
             <option selected>Type de ressource</option>

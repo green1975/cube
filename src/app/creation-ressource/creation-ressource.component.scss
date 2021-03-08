@@ -11,7 +11,7 @@
 }
 .text-description {
     text-align: center;
-    max-width: 1200px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -76,4 +76,27 @@ a:nth-child(odd) {
     justify-content: space-around;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+@media(max-width: 800px){
+    
+    .list-group{
+        padding: 0rem 1rem;
+    }
+    .list-group a {
+        flex-direction: column;
+    }
+    .list-group img {
+        width: 100%;
+    }
+    .container-form{
+        margin: 0rem 1rem;
+        margin-bottom: 100px;
+    }
+    .creation-container {
+        margin: 0rem 1rem;
+        margin-bottom: 1rem;;
+    }
+    .selector {
+        flex-direction: column;
+    }
 }
