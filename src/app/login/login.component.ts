@@ -1,6 +1,8 @@
 import { FormGroup, FormControl } from '@angular/forms';
 import { Component, HostListener } from '@angular/core';
 import { ConfigService } from '../config/config.service';
+import { DataSharingService } from '../data-sharing.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,16 +18,25 @@ export class LoginComponent {
     password: new FormControl('')
   });
   
-  constructor(private configService:ConfigService) {};
+  constructor(private configService:ConfigService, private router: Router, private dataSharingService: DataSharingService) {};
   onSubmit(){
     let data = {
-      fields: {
-        mail: this.login.value.email
-      },
+      filter: { mail: this.login.value.email},
+      fields: {mail: 1, nom:1 },
       limit: 1
     }
     this.configService.login(data).subscribe((user => {
-      console.log(user);
+      if(user['entries'].length != 0) {
+        sessionStorage.setItem('user', JSON.stringify(user['entries'][0]));
+        this.router.navigateByUrl('/');
+        this.dataSharingService.isUserLoggedIn.next(true);
+        
+      } else {
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigate([this.router.url]);
+      }
+        
     }))
   };
 }

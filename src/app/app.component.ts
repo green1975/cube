@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ConfigService } from './config/config.service';
+import { DataSharingService } from './data-sharing.service';
 
 
 @Component({
@@ -6,18 +9,35 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
-  title = 'realationnel';
-
+export class AppComponent  implements OnInit{
+  title = 'relationnel';
+  isUserLoggedIn:boolean = true;
   options = [
     { value: '1', label: 'Option 1' },
     { value: '2', label: 'Option 2' },
     { value: '3', label: 'Option 3' },
   ];  
-  
   affichage:boolean = false;
-  
-  toggle() {
+  constructor(private router: Router, private configService:ConfigService, private dataSharingService: DataSharingService) {
+  //   this.dataSharingService.isUserLoggedIn.subscribe( value => {
+  //     this.isUserLoggedIn = value;
+  //     console.log(value);
+      
+  // });
+  }
+  ngOnInit() {
+    
+    window.addEventListener("click", () => {
+      (this.affichage == true)?this.affichage = false:this.affichage = false;
+     });
+  }
+  toggle(event) {
+    event.stopPropagation();
     (this.affichage == true)?this.affichage = false:this.affichage = true; 
+  }
+  deconnection(){
+    sessionStorage.removeItem('user');
+    this.router.navigateByUrl('/');
+    this.dataSharingService.isUserLoggedIn.next(false);
   }
 }

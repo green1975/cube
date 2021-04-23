@@ -13,8 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { CreationRessourceComponent } from './creation-ressource/creation-ressource.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'accueil', pathMatch: 'full'},
-  { path: 'accueil', component:  AccueilComponent},
+  { path: '', component:  AccueilComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'favoris', component: FavorisComponent },

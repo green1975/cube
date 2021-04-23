@@ -1,6 +1,20 @@
-<div class="titre">Fiche ressource</div>
-<p class="text-description">guhsdfmjb nfdsgfdsglmfs dsgmlhg mjdfhgfdj smgmh fdjghfsdjgm fsdhgjsfdhgfdjghfd sjmghfsdg mufdhmgfjgfdj</p>
-<iframe class="video" max-width="500" max-height="315"src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+<div class="titre">{{ detail.titre }}</div>
+<div class="detail">
+  <div class="affichageContenu" [ngSwitch]="detail.typeRessourceId">
+    <iframe *ngSwitchCase="'Vidéos'" class="video" width="100%" frameborder="0" [src]="url" allowfullscreen></iframe>
+    <div *ngSwitchCase="'Article' ||'Texte'">{{ detail.contenu }}</div>
+  </div>
+  <div class="identite">
+    <div class="titreDetail">{{ detail.titre }}</div>
+    <small class="type">{{ detail.categorieId }} - {{ detail.typeRelationId }} - {{ detail.typeRessourceId }}</small>
+    <div class="text-description">{{ detail.description }}</div>
+    <div class="createur">
+      <div>{{ detail.userId }}</div>
+      <div>{{detail._created * 1000 | date: 'dd-mm-yyyy' }}</div>
+    </div>
+  </div>
+</div>
+
 <div class="list-group">
   <div class="titre">Commentaires</div>
     <div class="comment list-group-item-action align-items-start">

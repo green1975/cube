@@ -16,6 +16,7 @@ export class CreationRessourceComponent implements OnInit {
   typeRelation: any;
   typeRessource: any;
   lists: any;
+  usermail:any = JSON.parse(sessionStorage.getItem('user'));
   // lists = [
   //   {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvbdfmk jbvfdmjvbfd mkvfdsvkdsdkm vnfsdjkvn"},
   //   {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvb dfmkjbvf dmjvbfdmkvfdsvkdsd kmvnfsdjkvn"},
@@ -42,6 +43,10 @@ export class CreationRessourceComponent implements OnInit {
   constructor(private configService:ConfigService, private router: Router) { }
 
   ngOnInit() {
+    let data = {
+      filter: { userId: this.usermail.mail},
+      populate: 1
+    }
     this.configService.getConfig()
       .subscribe(
         items => {
@@ -59,9 +64,10 @@ export class CreationRessourceComponent implements OnInit {
       
       this.typeRessource = items2['entries'];
     });
-    this.configService.getRessource()
+    this.configService.getRessource(data)
     .subscribe(
       ressources => {
+        console.log(ressources)
         this.lists = ressources['entries'];
       }
     )
@@ -79,6 +85,7 @@ export class CreationRessourceComponent implements OnInit {
     }
   }
   onSubmit() {
+   
     // const formData = new FormData(); 
     // formData.append('file', this.create.get('fileSource').value); 
     // if (formData != null){
@@ -90,10 +97,11 @@ export class CreationRessourceComponent implements OnInit {
       data:{
         titre: this.create.value.titre,
         description: this.create.value.description,
-        contenu: this.create.value.texte,
+        contenu: this.create.value.texte || this.create.value.youtube,
         categorieId: this.create.value.categorie,
         typeRelationId:this.create.value.relation,
-        typeRessourceId:this.create.value.ressource
+        typeRessourceId:this.create.value.ressource,
+        userId: this.usermail.mail
       }
     }
     this.configService.postRessource(data).subscribe((resourceResult) => {

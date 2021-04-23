@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-fiche',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fiche.component.scss']
 })
 export class FicheComponent implements OnInit {
+  detail:any;
+  url:any;
   lists = [ 
     {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvbd fmkjbvf dmjv bfdmkvfds vkdsdkmvn fsdjkvn"},
     {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvb dfmkjbvfd mjvbfdmkv fdsvk dsdkmvnfsd jkvn"},
@@ -16,9 +20,16 @@ export class FicheComponent implements OnInit {
     {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvbdfm kjbvfdmjvbfdm kvfd svkdsdkmv nfsdjkvn"},
     {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvbd fmkjbv fdmjv bfdmk vfdsvkdsd kmvnfsdjk vn"},
   ]
-  constructor() { }
+  constructor(private route: ActivatedRoute, private Router: Router, private sanitize: DomSanitizer) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((param)=>{
+      this.detail = JSON.parse(param['data']);
+      if(this.detail.typeRessourceId == 'Vidéos') {
+        this.url = this.sanitize.bypassSecurityTrustResourceUrl(this.detail.contenu);
+      }
+      console.log(this.detail.contenu);
+    });
   }
 
 }

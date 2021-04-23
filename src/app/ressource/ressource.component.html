@@ -4,7 +4,7 @@
 <mdb-card class="card" *ngFor="let list of lists">
     <div class="view rgba-white-slight waves-light" mdbWavesEffect>
       <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
-      <a routerLink="/fiche">
+      <a (click)="displayDetail(list._id)">
         <div class="mask"></div>
       </a>
     </div>
@@ -22,9 +22,9 @@
         </thead>
         <tbody>
             <tr>
-                <td>{{list.categorie}}</td>
-                <td>{{list.relation}}</td>
-                <td>{{list.ressource}}</td>
+                <td>{{list.categorieId}}</td>
+                <td>{{list.typeRelationId}}</td>
+                <td>{{list.typeRessourceId}}</td>
             </tr>
         </tbody>
     </table>
@@ -32,8 +32,8 @@
        {{list.description}}
       </mdb-card-text>
       <div class="auteur">
-        <small>{{list.auteur}}</small>
-      <small>{{list.date}}</small>
+        <small>{{list.userId}}</small>
+      <small>{{list._created * 1000 | date: 'dd-mm-yyyy'}}</small>
       </div>
     </mdb-card-body>
   </mdb-card>

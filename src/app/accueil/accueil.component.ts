@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ConfigService } from '../config/config.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ThisReceiver } from '@angular/compiler';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,42 +23,35 @@ export class AccueilComponent implements OnInit {
   })
 
   constructor(
-    private configService: ConfigService) {
+    private configService: ConfigService, private router: Router) {
   }   
-   
-  
   ngOnInit() {
     this.configService.getConfig()
       .subscribe(
         items => {
-          console.log(items['entries']);
           this.categories = items['entries'];
         });
     this.configService.getConfig1()
   .subscribe(
     items1 => {
-      
       this.typeRelation = items1['entries'];
     });
     this.configService.getConfig2()
   .subscribe(
     items2 => {
-      
       this.typeRessource = items2['entries'];
-    });
+    });  
   }
+  
   onSubmit() {
     let data = {
-      filter: { $and:[{
-            categorie: this.searchResult.value.categorie,
-            typeRelationId: this.searchResult.value.relation,
-            typeRessourceId: this.searchResult.value.ressource
-          }]    
+      filter: {            
+            typeRessourceId: this.searchResult.value.ressource  
         }
       }
 
     this.configService.search(data).subscribe((result)=>{
-      console.log(result);
+      this.router.navigate(['/ressource', { 'data': JSON.stringify(result['entries'])}])
     })
   }
 }

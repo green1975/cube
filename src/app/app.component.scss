@@ -28,6 +28,9 @@
 .footer-copyright{
     background-color: var(--blue) !important;
 }
+.link {
+    color: var(--grey)!important;
+}
 @media(max-width:800px){
     .web {
         display: none;

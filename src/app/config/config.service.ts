@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpEvent, HttpEventType } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, throwError, of } from 'rxjs';
 import { catchError, retry, map } from 'rxjs/operators';
 import { LoginComponent } from '../login/login.component';
 
@@ -18,6 +18,7 @@ const httpOptions = {
 
 )
 export class ConfigService {
+status:boolean;
 configUrl = 'assets/config.json';
 serverUrl: string = "https://admin.myjolieplanet.com/upload.php";
   constructor(private http: HttpClient) { }
@@ -64,8 +65,11 @@ postRessource(data): Observable<Object> {
     catchError(this.handleError)
   );
 }
-getRessource(): Observable<Object> {
-  return this.http.get('https://admin.myjolieplanet.com/api/collections/get/ressource?token=8239152105c18d3d8e2282f747d183');
+getRessource(data): Observable<Object> {
+  return this.http.post('https://admin.myjolieplanet.com/api/collections/get/ressource?token=8239152105c18d3d8e2282f747d183', data);
+}
+getDetailRessource(id): Observable<Object>{
+  return this.http.post('https://admin.myjolieplanet.com/api/collections/get/ressource?token=8239152105c18d3d8e2282f747d183', id);
 }
 search(param): Observable<Object> {
   return this.http.post('https://admin.myjolieplanet.com/api/collections/get/ressource?token=8239152105c18d3d8e2282f747d183', param);
