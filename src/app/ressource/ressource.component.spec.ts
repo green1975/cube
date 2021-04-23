@@ -34,4 +34,5 @@ describe('RessourceComponent', () => {
         number = data['entries'].length;
         expect(number).toBe(1);
       })
+  });
 });

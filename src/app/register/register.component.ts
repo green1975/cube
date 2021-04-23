@@ -36,11 +36,9 @@ export class RegisterComponent implements OnInit {
         password: this.register.value.password
     }
   }
-  if(data.data.ville == "") {
-    return console.error('erreur, il manque la ville');
-  } else {
+  
     this.configService.addUser(data).subscribe((user) => {
-      this.router.navigate(['/']);})
-  }
+      this.router.navigate(['/']);
+    });
   }
 }

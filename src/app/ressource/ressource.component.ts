@@ -23,17 +23,16 @@ export class RessourceComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.lists = JSON.parse(params['data']);
+      this.lists = JSON.parse(params['data'] || null);
   });
   }
   displayDetail(id){
       let data = {
         filter: {
-          _id: '6046076032636223fb000166'
+          _id: id
         }
       }
       this.configService.getDetailRessource(data).subscribe((result)=>{
-        console.log(result['entries'].length);
         this.router.navigate(['/fiche', {'data': JSON.stringify(result['entries'][0])}]);
       })
     }
