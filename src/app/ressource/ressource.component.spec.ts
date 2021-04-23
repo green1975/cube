@@ -32,7 +32,7 @@ describe('RessourceComponent', () => {
     const configService: ConfigService = TestBed.get(ConfigService);
       configService.getDetailRessource(id).subscribe( data => {
         number = data['entries'].length;
-        expect(number).toBe(1);
+        expect(number).toBe(10);
       })
   });
 });
