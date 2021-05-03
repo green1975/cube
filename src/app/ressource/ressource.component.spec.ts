@@ -26,13 +26,14 @@ describe('RessourceComponent', () => {
   //   expect(component).toBeTruthy();
   // });
 
-  it('test le nombre de ressource', () => {
+  it('test le nombre de ressource', (done) => {
     let number;
     const id = '6046076032636223fb000166';
     const configService: ConfigService = TestBed.get(ConfigService);
       configService.getDetailRessource(id).subscribe( data => {
         number = data['entries'].length;
         expect(number).toBe(1);
+        done();
       })
   });
 });
