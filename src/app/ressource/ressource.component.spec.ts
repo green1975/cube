@@ -52,7 +52,6 @@ describe('RessourceComponent', () => {
 
   it('display title of element', () => {
     const debugElement = fixture.debugElement;
-    console.log(debugElement.nativeElement.querySelector('h4').textContent);
     expect(debugElement.nativeElement.querySelector('h4').textContent).toEqual('hello');
   });
 
