@@ -1,7 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config/config.service';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ThisReceiver } from '@angular/compiler';
 import { Router } from '@angular/router';
 
 

@@ -1,6 +1,5 @@
 import { Component, OnInit,ViewChild, ElementRef } from '@angular/core';
-import { HttpEventType, HttpErrorResponse } from '@angular/common/http';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ConfigService } from '../config/config.service';
 

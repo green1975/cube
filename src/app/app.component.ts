@@ -28,7 +28,7 @@ export class AppComponent  implements OnInit{
   ngOnInit() {
     
     window.addEventListener("click", () => {
-      (this.affichage == true)?this.affichage = false:this.affichage = false;
+      this.affichage = !this.affichage;
      });
   }
   toggle(event) {

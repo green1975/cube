@@ -20,7 +20,7 @@ export class FicheComponent implements OnInit {
     {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvbdfm kjbvfdmjvbfdm kvfd svkdsdkmv nfsdjkvn"},
     {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvbd fmkjbv fdmjv bfdmk vfdsvkdsd kmvnfsdjk vn"},
   ]
-  constructor(private route: ActivatedRoute, private Router: Router, private sanitize: DomSanitizer) { }
+  constructor(private route: ActivatedRoute, private router: Router, private sanitize: DomSanitizer) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((param)=>{
@@ -28,7 +28,6 @@ export class FicheComponent implements OnInit {
       if(this.detail.typeRessourceId == 'Vidéos') {
         this.url = this.sanitize.bypassSecurityTrustResourceUrl(this.detail.contenu);
       }
-      console.log(this.detail.contenu);
     });
   }
 

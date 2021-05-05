@@ -17,7 +17,7 @@
 .size-image {
     width: 100px;
     margin-right: 20px;
-    margin-top: 20px;;
+    margin-top: 20px;
 }
 .trash {
     margin-left: 20px;
@@ -30,7 +30,7 @@ a:nth-child(even) {
 }
 a:nth-child(odd) {
     background: var(--grey);
-    color: var(--black)
+    color: var(--black);
 }
 @media(max-width: 800px){
     

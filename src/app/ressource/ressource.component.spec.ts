@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, fakeAsync, tick, flush } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ConfigService } from '../config/config.service';
 import { RessourceComponent } from './ressource.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -25,10 +25,10 @@ describe('RessourceComponent', () => {
   });
 
   let configService: ConfigService;
-  beforeEach(() => configService = TestBed.get(ConfigService));
+  beforeEach(() => configService = TestBed.inject(ConfigService));
 
   let httpTestingController: HttpTestingController;
-  beforeEach(() => httpTestingController = TestBed.get(HttpTestingController));
+  beforeEach(() => httpTestingController = TestBed.inject(HttpTestingController));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(RessourceComponent);
@@ -40,9 +40,9 @@ describe('RessourceComponent', () => {
     httpTestingController.verify();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
   it('test lists contains elements', ()=> {
     component.ngOnInit();

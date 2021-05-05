@@ -6,6 +6,6 @@ export class RessourcePage {
   }
 
   async getDetailRessource(id){
-      return await element (by.css('')).click();
+      return  element (by.css('')).click();
   }
 }

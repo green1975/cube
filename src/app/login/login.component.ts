@@ -1,5 +1,5 @@
 import { FormGroup, FormControl } from '@angular/forms';
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { ConfigService } from '../config/config.service';
 import { DataSharingService } from '../data-sharing.service';
 import { Router } from '@angular/router';
@@ -18,7 +18,7 @@ export class LoginComponent {
     password: new FormControl('')
   });
   
-  constructor(private configService:ConfigService, private router: Router, private dataSharingService: DataSharingService) {};
+  constructor(private configService:ConfigService, private router: Router, private dataSharingService: DataSharingService) {}
   onSubmit(){
     let data = {
       filter: { mail: this.login.value.email},
@@ -38,5 +38,5 @@ export class LoginComponent {
       }
         
     }))
-  };
+  }
 }

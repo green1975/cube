@@ -17,10 +17,6 @@ export class ContactComponent  {
   disabledSubmitButton: boolean = false;
   optionsSelect: Array<any>;
 
-  
-  constructor() {}
-
-
   onSubmit() {
     console.log(this.contactForm.value);
   }

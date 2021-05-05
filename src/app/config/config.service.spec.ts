@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, fakeAsync, tick, flush } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { ConfigService } from '../config/config.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
@@ -14,18 +14,14 @@ describe('RessourceComponent', () => {
   });
 
   let configService: ConfigService;
-  beforeEach(() => configService = TestBed.get(ConfigService));
+  beforeEach(() => configService = TestBed.inject(ConfigService));
 
   let httpTestingController: HttpTestingController;
-  beforeEach(() => httpTestingController = TestBed.get(HttpTestingController));
+  beforeEach(() => httpTestingController = TestBed.inject(HttpTestingController));
 
   afterEach(() => {
     httpTestingController.verify();
   });
-
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
 
   it('test le nombre de ressource', () => {
     let number: any;
