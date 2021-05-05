@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule} from '@angular/common/http/testing';
 import { CreationRessourceComponent } from './creation-ressource.component';
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('CreationRessourceComponent', () => {
   let component: CreationRessourceComponent;
@@ -8,7 +9,11 @@ describe('CreationRessourceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreationRessourceComponent ]
+      declarations: [ CreationRessourceComponent ],
+      imports: [
+        RouterTestingModule.withRoutes([]),
+        HttpClientTestingModule
+      ]
     })
     .compileComponents();
   });

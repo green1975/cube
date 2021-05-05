@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ConfigService } from '../config/config.service';
 import { DataSharingService } from '../data-sharing.service';
 import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',

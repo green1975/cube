@@ -10,8 +10,9 @@ import { DataSharingService } from './data-sharing.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  implements OnInit{
-  title = 'relationnel';
+
   isUserLoggedIn:boolean = true;
+  title = 'relationnel';
   options = [
     { value: '1', label: 'Option 1' },
     { value: '2', label: 'Option 2' },

@@ -24,9 +24,16 @@ export class FicheComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((param)=>{
-      this.detail = JSON.parse(param['data']);
-      if(this.detail.typeRessourceId == 'Vidéos') {
-        this.url = this.sanitize.bypassSecurityTrustResourceUrl(this.detail.contenu);
+      if(!param) {
+        this.detail = JSON.parse(param['data']);
+        if(!this.detail.titre) {
+          this.detail.titre = 'titre inconnu';
+        }
+      if(this.detail.typeRessourceId) {
+        if(this.detail.typeRessourceId == 'Vidéos') {
+          this.url = this.sanitize.bypassSecurityTrustResourceUrl(this.detail.contenu);
+        }
+      }
       }
     });
   }

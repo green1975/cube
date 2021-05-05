@@ -15,7 +15,7 @@ export class CreationRessourceComponent implements OnInit {
   typeRelation: any;
   typeRessource: any;
   lists: any;
-  usermail:any = JSON.parse(sessionStorage.getItem('user'));
+  usermail:any = JSON.parse(sessionStorage.getItem('user')) || 'jhonDoe@test.fr';
   // lists = [
   //   {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvbdfmk jbvfdmjvbfd mkvfdsvkdsdkm vnfsdjkvn"},
   //   {titre: "test", categorie:"vie", relation:"social", ressource:"text", auteur:"moi", date:"27/12/2021", description:"kfdvb dfmkjbvf dmjvbfdmkvfdsvkdsd kmvnfsdjkvn"},
