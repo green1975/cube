@@ -51,5 +51,7 @@ jobs:
     - uses: akhileshns/heroku-deploy@v3.12.12
       with:
         HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
-        appdir: "./dist/realationnel"
+        source_file: './dist/realationnel/test2.md'
+        destination_repo: 'deploy cube'
+        destination_folder: 'relationnel'
       
