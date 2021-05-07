@@ -52,5 +52,5 @@ jobs:
       with:
         HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "Cube"
-        appdir: "./dist/reationnel"
+        appdir: "./dist/realationnel"
       
