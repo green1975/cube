@@ -51,6 +51,5 @@ jobs:
     - uses: akhileshns/heroku-deploy@v3.12.12
       with:
         HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "deploy-cube"
         appdir: "./dist/realationnel"
       
