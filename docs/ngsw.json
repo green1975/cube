@@ -1,0 +1,141 @@
+{
+  "configVersion": 1,
+  "timestamp": 1620394268505,
+  "index": "C:/Program Files/Git/cube-project/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "C:/Program Files/Git/cube-project/favicon.ico",
+        "C:/Program Files/Git/cube-project/index.html",
+        "C:/Program Files/Git/cube-project/main.9136068526af6c874cce.js",
+        "C:/Program Files/Git/cube-project/manifest.webmanifest",
+        "C:/Program Files/Git/cube-project/polyfills.6abdde2583a2e01a2350.js",
+        "C:/Program Files/Git/cube-project/runtime.7b63b9fd40098a2e8207.js",
+        "C:/Program Files/Git/cube-project/scripts.b5025b7c30282155348a.js",
+        "C:/Program Files/Git/cube-project/styles.195689a4fa3b7b051c8c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "C:/Program Files/Git/cube-project/01.f9d01435976a8cfb9daa.png",
+        "C:/Program Files/Git/cube-project/02.53687cbe6512fb70292f.png",
+        "C:/Program Files/Git/cube-project/03.bc6306f4b8105410a282.png",
+        "C:/Program Files/Git/cube-project/04.2006e36b1a39bb1ce0cb.png",
+        "C:/Program Files/Git/cube-project/05.1fd3bfd5831b5af640a3.png",
+        "C:/Program Files/Git/cube-project/06.d50a610ed86c3d5363bb.png",
+        "C:/Program Files/Git/cube-project/07.535b98d8b10c9c1713fb.png",
+        "C:/Program Files/Git/cube-project/08.83eb2c7e2892a66afe14.png",
+        "C:/Program Files/Git/cube-project/09.2012ae6071a90778f12d.png",
+        "C:/Program Files/Git/cube-project/arrow_left.db6e2d88c7c35a775ce4.svg",
+        "C:/Program Files/Git/cube-project/arrow_right.f7c6ac6d310d3b82f0a0.svg",
+        "C:/Program Files/Git/cube-project/assets/config.json",
+        "C:/Program Files/Git/cube-project/assets/icons/icon-128x128.png",
+        "C:/Program Files/Git/cube-project/assets/icons/icon-144x144.png",
+        "C:/Program Files/Git/cube-project/assets/icons/icon-152x152.png",
+        "C:/Program Files/Git/cube-project/assets/icons/icon-192x192.png",
+        "C:/Program Files/Git/cube-project/assets/icons/icon-384x384.png",
+        "C:/Program Files/Git/cube-project/assets/icons/icon-512x512.png",
+        "C:/Program Files/Git/cube-project/assets/icons/icon-72x72.png",
+        "C:/Program Files/Git/cube-project/assets/icons/icon-96x96.png",
+        "C:/Program Files/Git/cube-project/assets/logo/avatar.jpg",
+        "C:/Program Files/Git/cube-project/assets/logo/relationnel.png",
+        "C:/Program Files/Git/cube-project/fa-brands-400.330e879afe4a0abb35f2.ttf",
+        "C:/Program Files/Git/cube-project/fa-brands-400.5f63cb7f47b6ea89773b.woff",
+        "C:/Program Files/Git/cube-project/fa-brands-400.6e63bd22128f27b83f22.woff2",
+        "C:/Program Files/Git/cube-project/fa-brands-400.98f20b9ec79b2fee02a3.eot",
+        "C:/Program Files/Git/cube-project/fa-brands-400.991c1c761fc31f9c3252.svg",
+        "C:/Program Files/Git/cube-project/fa-regular-400.2c154b0f8c0d8d166162.woff2",
+        "C:/Program Files/Git/cube-project/fa-regular-400.62a07ffeac77696f17ef.eot",
+        "C:/Program Files/Git/cube-project/fa-regular-400.ac2367644e559de4ff33.ttf",
+        "C:/Program Files/Git/cube-project/fa-regular-400.ea5a41ec4a24ce93298e.woff",
+        "C:/Program Files/Git/cube-project/fa-regular-400.f3187c7462849ed261a8.svg",
+        "C:/Program Files/Git/cube-project/fa-solid-900.0454203f26b33fc02e2b.svg",
+        "C:/Program Files/Git/cube-project/fa-solid-900.3eb06c702e27fb110194.woff2",
+        "C:/Program Files/Git/cube-project/fa-solid-900.6606667d9800a27eb8b5.eot",
+        "C:/Program Files/Git/cube-project/fa-solid-900.915a0b79c22a1c1f64da.ttf",
+        "C:/Program Files/Git/cube-project/fa-solid-900.f4f93856730733912b1e.woff"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "C:/Program Files/Git/cube-project/01.f9d01435976a8cfb9daa.png": "7c046ea4b1669da4eb81acccd7fc58b00201543d",
+    "C:/Program Files/Git/cube-project/02.53687cbe6512fb70292f.png": "9775bb2755b51c9eb03a3057eaf3914dc3149a6b",
+    "C:/Program Files/Git/cube-project/03.bc6306f4b8105410a282.png": "c284f2c9ece402ccc1301b4301252476864235c0",
+    "C:/Program Files/Git/cube-project/04.2006e36b1a39bb1ce0cb.png": "2816672fcbef8e08b431d600f26b119e2122eaa6",
+    "C:/Program Files/Git/cube-project/05.1fd3bfd5831b5af640a3.png": "8d9fe47653c2615fd4a1e861e882e2efdb0f34a0",
+    "C:/Program Files/Git/cube-project/06.d50a610ed86c3d5363bb.png": "9d566536e859c18075d00e7f8cd6c490d310c089",
+    "C:/Program Files/Git/cube-project/07.535b98d8b10c9c1713fb.png": "078e49f4fa97e117da76cbef2b492e8cf92d0d45",
+    "C:/Program Files/Git/cube-project/08.83eb2c7e2892a66afe14.png": "b3916a95cb81602b7bd41eaefa92eb3a8fd39b70",
+    "C:/Program Files/Git/cube-project/09.2012ae6071a90778f12d.png": "4d1c1ec2c710745ddcc43fdd0ae41d3095398a77",
+    "C:/Program Files/Git/cube-project/arrow_left.db6e2d88c7c35a775ce4.svg": "fb5b615955042a7c6aa16b1f0e8dcbdb279a8ac0",
+    "C:/Program Files/Git/cube-project/arrow_right.f7c6ac6d310d3b82f0a0.svg": "fac5123a15d035a642b74740b89636e2ace09810",
+    "C:/Program Files/Git/cube-project/assets/config.json": "cc3ebc02630240be8a9f513d18e1deb38b6ab777",
+    "C:/Program Files/Git/cube-project/assets/icons/icon-128x128.png": "d55714293237c7bffc08c6363513b7ba7e3bfff4",
+    "C:/Program Files/Git/cube-project/assets/icons/icon-144x144.png": "0ed7cfe05402779e665e28ca3d986589125f1588",
+    "C:/Program Files/Git/cube-project/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "C:/Program Files/Git/cube-project/assets/icons/icon-192x192.png": "46f647fe480e5ed50288fade411df5e0e050d94b",
+    "C:/Program Files/Git/cube-project/assets/icons/icon-384x384.png": "67d728dd10e4bb4159abe67419f8763eed529686",
+    "C:/Program Files/Git/cube-project/assets/icons/icon-512x512.png": "a347c60dfb63a8f4a2b41c7c162f0f87724e5d57",
+    "C:/Program Files/Git/cube-project/assets/icons/icon-72x72.png": "6ca07a38bc3d217cca16a8b18492e5f9071dd37b",
+    "C:/Program Files/Git/cube-project/assets/icons/icon-96x96.png": "6ec8613061e750c8ffe029cd9fb25d65750b62f1",
+    "C:/Program Files/Git/cube-project/assets/logo/avatar.jpg": "4d48507a4b2e05e5883b9462382a5512927004a6",
+    "C:/Program Files/Git/cube-project/assets/logo/relationnel.png": "fcddedf40dbb3233c7703bf613cebf7117699454",
+    "C:/Program Files/Git/cube-project/fa-brands-400.330e879afe4a0abb35f2.ttf": "1d7866a71b5e80f5347a0e7ecda5d73417eb32dc",
+    "C:/Program Files/Git/cube-project/fa-brands-400.5f63cb7f47b6ea89773b.woff": "30aa9a4a5fa52ecc8b0bd4ab043b6c0ae21ed466",
+    "C:/Program Files/Git/cube-project/fa-brands-400.6e63bd22128f27b83f22.woff2": "9e355abda14ee62a7987b2ba7e2e887d33337e25",
+    "C:/Program Files/Git/cube-project/fa-brands-400.98f20b9ec79b2fee02a3.eot": "2f3fffe922f60679e7e3c6a06c2432f9762a9465",
+    "C:/Program Files/Git/cube-project/fa-brands-400.991c1c761fc31f9c3252.svg": "38d9fb997613254e98685dbd613bc2769dcde75f",
+    "C:/Program Files/Git/cube-project/fa-regular-400.2c154b0f8c0d8d166162.woff2": "c07631a91ee71c0a1a84a3151db42b1f2d9a9692",
+    "C:/Program Files/Git/cube-project/fa-regular-400.62a07ffeac77696f17ef.eot": "25eaf36ceec96e7f320f9abdaed39afe9873d6bb",
+    "C:/Program Files/Git/cube-project/fa-regular-400.ac2367644e559de4ff33.ttf": "31af896ae988b97eaf61f72d7e3fb770a1f6968e",
+    "C:/Program Files/Git/cube-project/fa-regular-400.ea5a41ec4a24ce93298e.woff": "298e5a9f355a69e0f06f48bf7db9595622668c25",
+    "C:/Program Files/Git/cube-project/fa-regular-400.f3187c7462849ed261a8.svg": "2dbcae3137c0df57c93ce1e653390c522c6b1492",
+    "C:/Program Files/Git/cube-project/fa-solid-900.0454203f26b33fc02e2b.svg": "2294d9f72ee4cd4811185b9da176188d9e045c4c",
+    "C:/Program Files/Git/cube-project/fa-solid-900.3eb06c702e27fb110194.woff2": "72344eab2e7431eec313caa21f266cbfda7caf60",
+    "C:/Program Files/Git/cube-project/fa-solid-900.6606667d9800a27eb8b5.eot": "9b47ed53b15058636a26d70f05a5bf8f505830dc",
+    "C:/Program Files/Git/cube-project/fa-solid-900.915a0b79c22a1c1f64da.ttf": "54a19042f3232f6b58df80f01b4b018a11868096",
+    "C:/Program Files/Git/cube-project/fa-solid-900.f4f93856730733912b1e.woff": "18d9a334e7184ae08e3a1c0468afb56a2a5b51cc",
+    "C:/Program Files/Git/cube-project/favicon.ico": "e4c0c7d2134c03a5e2c76c1fc54e5f9f256ba835",
+    "C:/Program Files/Git/cube-project/index.html": "dc37b210034c616a7c59691c7c526a3f60abf949",
+    "C:/Program Files/Git/cube-project/main.9136068526af6c874cce.js": "85cd80b2ba7346bcbef5db38c23e6a6520ef6bfd",
+    "C:/Program Files/Git/cube-project/manifest.webmanifest": "fda5765b10494524df22366c987022e4c7d7a537",
+    "C:/Program Files/Git/cube-project/polyfills.6abdde2583a2e01a2350.js": "f888b31e000d9b05c8c3fef19c325d813f2b7e1b",
+    "C:/Program Files/Git/cube-project/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "C:/Program Files/Git/cube-project/scripts.b5025b7c30282155348a.js": "2dfd699d434dca5612c2f602f8e2519b2b117cb3",
+    "C:/Program Files/Git/cube-project/styles.195689a4fa3b7b051c8c.css": "92d8f37fbe9fbe3ec2342f6d5e29acb7dbc5335b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

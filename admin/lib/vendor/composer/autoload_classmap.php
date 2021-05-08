@@ -28,6 +28,7 @@ return array(
     'ColinODell\\Json5\\Json5Decoder' => $vendorDir . '/colinodell/json5/src/Json5Decoder.php',
     'ColinODell\\Json5\\SyntaxError' => $vendorDir . '/colinodell/json5/src/SyntaxError.php',
     'Collections\\Controller\\Admin' => $baseDir . '/modules/Collections/Controller/Admin.php',
+    'Collections\\Controller\\Calcul' => $baseDir . '/modules/Collections/Controller/Calcul.php',
     'Collections\\Controller\\Import' => $baseDir . '/modules/Collections/Controller/Import.php',
     'Collections\\Controller\\RestApi' => $baseDir . '/modules/Collections/Controller/RestApi.php',
     'Collections\\Controller\\Trash' => $baseDir . '/modules/Collections/Controller/Trash.php',
