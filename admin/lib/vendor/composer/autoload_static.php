@@ -194,6 +194,7 @@ class ComposerStaticInit3043aff3db8446d21c22f36f77adce25
         'ColinODell\\Json5\\Json5Decoder' => __DIR__ . '/..' . '/colinodell/json5/src/Json5Decoder.php',
         'ColinODell\\Json5\\SyntaxError' => __DIR__ . '/..' . '/colinodell/json5/src/SyntaxError.php',
         'Collections\\Controller\\Admin' => __DIR__ . '/../../..' . '/modules/Collections/Controller/Admin.php',
+        'Collections\\Controller\\Calcul' => __DIR__ . '/../../..' . '/modules/Collections/Controller/Calcul.php',
         'Collections\\Controller\\Import' => __DIR__ . '/../../..' . '/modules/Collections/Controller/Import.php',
         'Collections\\Controller\\RestApi' => __DIR__ . '/../../..' . '/modules/Collections/Controller/RestApi.php',
         'Collections\\Controller\\Trash' => __DIR__ . '/../../..' . '/modules/Collections/Controller/Trash.php',

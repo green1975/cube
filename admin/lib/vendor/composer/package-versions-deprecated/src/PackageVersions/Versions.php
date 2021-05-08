@@ -82,7 +82,7 @@ final class Versions
   'symfony/polyfill-php80' => 'v1.22.1@dc3063ba22c2a1fd2f45ed856374d79114998f91',
   'theseer/tokenizer' => '1.2.0@75a63c33a8577608444246075ea0af0d052e452a',
   'webmozart/assert' => '1.10.0@6964c76c7804814a842473e0c8fd15bab0f18e25',
-  'agentejo/cockpit' => 'dev-master@b85a58ccc7d913c53a2b00f04285fa49cbafea89',
+  'agentejo/cockpit' => 'dev-main@eea36decefb78d89c8fa8b4218cfad1b4488f55c',
 );
 
     private function __construct()
