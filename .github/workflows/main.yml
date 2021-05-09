@@ -35,7 +35,7 @@ jobs:
     - uses: php-actions/phpunit@v2
       with:
           bootstrap: admin/lib/vendor/autoload.php
-          configuration: tests/phpunit.xml
+          configuration: admin/tests/phpunit.xml
     
   deploy:
 
