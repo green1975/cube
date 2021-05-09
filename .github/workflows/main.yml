@@ -68,7 +68,15 @@ jobs:
     - run: npm install
     - run: npm install -g @angular/cli > /dev/null
     - run: ng build --prod
-    - uses: akhileshns/heroku-deploy@v3.12.12
+    - name: copy file via ssh key
+      uses: appleboy/scp-action@master
+      env:
+        HOST: vj654.ftp.infomaniak.com
+        USERNAME: vj654_test
+        PORT: 22
+        KEY: ${{ secrets.forSSH }}
       with:
-        HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+        source: "./dist/realationnel/"
+        target: "/home/clients/3c6135cda21de04b0eadc9b1a9851f53/cube/realationnel"
+        strip_components: 3
       
