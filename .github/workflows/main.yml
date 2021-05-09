@@ -79,15 +79,4 @@ jobs:
         source: "./dist/realationnel/"
         target: "/home/clients/3c6135cda21de04b0eadc9b1a9851f53/cube/realationnel"
         strip_components: 3
-    - name: copy back-end via ssh key
-      uses: appleboy/scp-action@master
-      env:
-        HOST: vj654.ftp.infomaniak.com
-        USERNAME: vj654_test
-        PORT: 22
-        PASSWORD: ${{ secrets.FORSSH }}
-      with:
-        source: "./admin"
-        target: "/home/clients/3c6135cda21de04b0eadc9b1a9851f53/cube/cockpit-master"
-        strip_components: 3
       
