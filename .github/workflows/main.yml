@@ -74,7 +74,7 @@ jobs:
         HOST: vj654.ftp.infomaniak.com
         USERNAME: vj654_test
         PORT: 22
-        KEY: ${{ secrets.forSSH }}
+        KEY: ${{ secrets.FORSSH }}
       with:
         source: "./dist/realationnel/"
         target: "/home/clients/3c6135cda21de04b0eadc9b1a9851f53/cube/realationnel"
